@@ -25,26 +25,13 @@ public class Main {
 
         operacao = input.next().charAt(0);
 
-        if (operacao == '+'){
-            resultado = valor1 + valor2;
-            System.out.println("Você Escolheu a Operação de Soma");
-        }else if (operacao == '-') {
-            resultado = valor1 - valor2;
-            System.out.println("Você Escolheu a Operação de Subtração");
-        }else if (operacao == '*') {
-            resultado = valor1 * valor2;
-            System.out.println("Você Escolheu a Operação de Multiplicação");
-        }else if (operacao == '/') {
-            resultado = valor1 / valor2;
-            System.out.println("Você Escolheu a Operação de Divisão");
-        }else {
-            System.out.println("Você Escolheu uma Opção Inválida");
-            return;
+        Calculadora calculadora = new Calculadora();
+            calculadora.calcular(valor1,valor2,operacao);
 
-        }
 
-        System.out.println("ENTÂO");
-        System.out.println(valor1 + " " + operacao+" " + valor2 + " = " +resultado);
+
+        System.out.println(calculadora.getResultado());
+
     }
 
 }
